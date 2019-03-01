@@ -25,6 +25,7 @@ def sequential_search(lists, item):
     end_time = time.time()
     return (end_time - init_time, found)
 
+
 def ordered_sequential_search(lists, item):
     """"An ordered sequential search.
     Args:
@@ -49,6 +50,7 @@ def ordered_sequential_search(lists, item):
                 position = position + 1
     end_time = time.time()
     return (end_time - init_time, found)
+
 
 def binary_search_iterative(lists, item):
     """binary search function.
@@ -79,6 +81,7 @@ def binary_search_iterative(lists, item):
                 first = midpoint + 1
     end_time = time.time()
     return (end_time - init_time, found)
+
 
 def binary_search_recursive(lists, item):
     """binary search function.
@@ -130,11 +133,16 @@ def main():
             results[2] += binary_search_iterative(my_list, -1)[0]
             results[3] += binary_search_recursive(my_list, -1)[0]
             counter -= 1
-        print ('For the sample number of {}... '.format(i))
-        print ('The sequential search took %10.7f seconds to run, on average.') % (results[0] / 100)
-        print ('The ordered sequential search ' + 'took %10.7f seconds to run, on average.') % (results[1] / 100)
-        print ('The iterative binary search ' + 'took %10.7f seconds to run, on average.') % (results[2] / 100)
-        print ('The recursive binary search ' + 'took %10.7f seconds to run, on average.') % (results[3] / 100)
+        print('For the sample number of {}... '.format(i))
+        print('The sequential search took %10.7f seconds to run, on average.') % (
+            results[0] / 100)
+        print('The ordered sequential search ' +
+              'took %10.7f seconds to run, on average.') % (results[1] / 100)
+        print('The iterative binary search ' +
+              'took %10.7f seconds to run, on average.') % (results[2] / 100)
+        print('The recursive binary search ' +
+              'took %10.7f seconds to run, on average.') % (results[3] / 100)
+
 
 if __name__ == "__main__":
     main()

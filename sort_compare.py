@@ -57,7 +57,7 @@ def random_list(ran_num):
     """Random Function."""
     my_list = []
     for i in range(ran_num):
-        my_list.append(random.randint(1,ran_num))
+        my_list.append(random.randint(1, ran_num))
     return my_list
 
 
@@ -75,10 +75,14 @@ def main():
             result[1] += shell_sort(my_list)[0]
             result[2] += python_sort(my_list)[0]
             list_num -= 1
-        print ('For the sample number of {}... '.format(num))
-        print ('Insertion Sort took %10.7f seconds to run, on average.' % (result[0] / 100))
-        print ('Shell Sort ' + 'took %10.7f seconds to run, on average.' % (result[1] / 100))
-        print ('Python Sort ' + 'took %10.7f seconds to run, on average.' % (result[2] / 100))
+        print('For the sample number of {}... '.format(num))
+        print('Insertion Sort took %10.7f seconds to run, on average.' %
+              (result[0] / 100))
+        print('Shell Sort ' + 'took %10.7f seconds to run, on average.' %
+              (result[1] / 100))
+        print('Python Sort ' + 'took %10.7f seconds to run, on average.' %
+              (result[2] / 100))
+
 
 if __name__ == "__main__":
     main()
